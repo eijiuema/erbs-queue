@@ -93,18 +93,18 @@
         <div class="tier">
           <span class="mmr">{user.mmr.solo}</span>
           <img
-            src="/img/tiers/{mmrToTier(user.mmr.solo)}.png"
+            src="img/tiers/{mmrToTier(user.mmr.solo)}.png"
             alt="Solo Tier"
           />
         </div>
         <div class="tier">
           <span class="mmr">{user.mmr.duo}</span>
-          <img src="/img/tiers/{mmrToTier(user.mmr.duo)}.png" alt="Duo Tier" />
+          <img src="img/tiers/{mmrToTier(user.mmr.duo)}.png" alt="Duo Tier" />
         </div>
         <div class="tier">
           <span class="mmr">{user.mmr.squad}</span>
           <img
-            src="/img/tiers/{mmrToTier(user.mmr.squad)}.png"
+            src="img/tiers/{mmrToTier(user.mmr.squad)}.png"
             alt="Squad Tier"
           />
         </div>
@@ -118,7 +118,7 @@
       <div class="queue">
         <Queue
           name="Ranked Solo"
-          img="/img/solo.png"
+          img="img/solo.png"
           ranks={queues.solo}
           joined={user.queue == "solo"}
           join={() => joinQueue("solo")}
@@ -128,7 +128,7 @@
       <div class="queue">
         <Queue
           name="Ranked Duo"
-          img="/img/duo.png"
+          img="img/duo.png"
           ranks={queues.duo}
           joined={user.queue == "duo"}
           join={() => joinQueue("duo")}
@@ -138,7 +138,7 @@
       <div class="queue">
         <Queue
           name="Ranked Squad"
-          img="/img/squad.png"
+          img="img/squad.png"
           ranks={queues.squad}
           joined={user.queue == "squad"}
           join={() => joinQueue("squad")}
