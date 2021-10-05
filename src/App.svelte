@@ -74,8 +74,8 @@
   </div>
 {/if}
 
-<main>
-  {#if user}
+{#if user}
+  <main>
     <div class="user-info">
       <SvelteTooltip
         tip={user.queue ? "Saia da fila para trocar o nick" : undefined}
@@ -146,10 +146,8 @@
         />
       </div>
     </div>
-  {:else}
-    <h1>Conectando...</h1>
-  {/if}
-</main>
+  </main>
+{/if}
 
 <style>
   main {
