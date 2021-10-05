@@ -92,10 +92,7 @@
       <div class="tiers">
         <div class="tier">
           <span class="mmr">{user.mmr.solo}</span>
-          <img
-            src="img/tiers/{mmrToTier(user.mmr.solo)}.png"
-            alt="Solo Tier"
-          />
+          <img src="img/tiers/{mmrToTier(user.mmr.solo)}.png" alt="Solo Tier" />
         </div>
         <div class="tier">
           <span class="mmr">{user.mmr.duo}</span>
@@ -150,28 +147,6 @@
 {/if}
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 16px;
-  }
-
-  .user-info {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-
-  .user-info input {
-    text-align: center;
-  }
-
-  .user-count {
-    margin: 0 auto;
-    text-align: center;
-  }
-
   .loader-overlay {
     position: absolute;
     top: 0;
@@ -204,11 +179,36 @@
     }
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .user-info input {
+    text-align: center;
+  }
+
+  .user-count {
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    font-size: 1.25em;
+  }
+
   .queues {
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 16px auto;
     justify-content: space-between;
   }
 
