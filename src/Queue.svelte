@@ -50,6 +50,7 @@
 <style>
   .container {
     display: flex;
+    overflow-x: auto;
     height: 355px;
   }
 
