@@ -6,7 +6,7 @@
   let data;
 
   $: data = {
-    labels: ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Diamante", "Titã"],
+    labels: ["Iron", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Titan"],
     datasets: [
       {
         backgroundColor: [
@@ -119,11 +119,5 @@
     chart = null;
   });
 </script>
-
-<!-- <pre style="position: absolute; top: 0; left: 0;">{JSON.stringify(ranks)}</pre>
-<pre
-  style="position: absolute; top: 2em; left: 0;">{JSON.stringify(players, null, 2)}</pre>
-<pre
-  style="position: absolute; top: 8em; left: 0;">{JSON.stringify(data, null, 2)}</pre> -->
 
 <canvas bind:this={chartRef} />

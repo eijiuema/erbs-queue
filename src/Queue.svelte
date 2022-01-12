@@ -9,14 +9,6 @@
   export let join;
   export let leave;
 
-  // const secondsToTime = (milliseconds) => {
-  //   const seconds = milliseconds / 1000;
-  //   const s = String(Math.floor(seconds % 60)).padStart(2, "0");
-  //   const m = String(Math.floor((seconds / 60) % 60)).padStart(2, "0");
-  //   const h = String(Math.floor(seconds / (60 * 60))).padStart(2, "0");
-  //   return `${h}:${m}:${s}`;
-  // };
-
   const handleClick = () => {
     if (joined) {
       leave();
@@ -30,12 +22,12 @@
   <div class="card" style="background-image: url({img})" on:click={handleClick}>
     <div class="box">
       {sum(ranks.flat())}
-      {sum(ranks.flat()) == 1 ? "jogador" : "jogadores"}
+      {sum(ranks.flat()) == 1 ? "player" : "players"}
     </div>
     {#if joined}
-      <div class="box center">Sair da fila</div>
+      <div class="box center">Join queue</div>
     {:else}
-      <div class="box center">Entrar na fila</div>
+      <div class="box center">Leave queue</div>
     {/if}
     <div class="box">{name}</div>
   </div>

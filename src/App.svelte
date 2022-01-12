@@ -35,7 +35,7 @@
   });
 
   socket.on("disconnect", () => {
-    alert("Desconectado, a página será atualizada para reconectar.");
+    alert("Connection lost. The page will be refreshed...");
     location.reload();
   });
 
@@ -78,11 +78,11 @@
   <main>
     <div class="user-info">
       <SvelteTooltip
-        tip={user.queue ? "Saia da fila para trocar o nick" : undefined}
+        tip={user.queue ? "Leave the queue before changing your nickname" : undefined}
         bottom
       >
         <input
-          placeholder="Digite seu nick"
+          placeholder="Enter your nickname"
           bind:value={user.nickname}
           on:change={updateNickname}
           disabled={updatingUserState || user.queue}
@@ -109,7 +109,7 @@
     </div>
     <div class="user-count">
       {userCount}
-      {userCount == 1 ? "jogador conectado" : "jogadores conectados"}
+      {userCount == 1 ? "player connected" : "players connected"}
     </div>
     <div class="queues">
       <div class="queue">
