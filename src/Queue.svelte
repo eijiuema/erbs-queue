@@ -25,9 +25,9 @@
       {sum(ranks.flat()) == 1 ? "player" : "players"}
     </div>
     {#if joined}
-      <div class="box center">Join queue</div>
-    {:else}
       <div class="box center">Leave queue</div>
+    {:else}
+      <div class="box center">Join queue</div>
     {/if}
     <div class="box">{name}</div>
   </div>
